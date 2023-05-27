@@ -134,7 +134,7 @@ fieldset {
     border: 2px solid #B6A39E;
 }
 
-button {
+.submit, .reset {
     width: 30%;
     padding: 20px;
     font-size: 1.5em;
@@ -145,12 +145,16 @@ button {
     text-shadow: -0.75px -0.75px 0 #3A3238, 0.75px -0.75px 0 #3A3238, -0.75px 0.75px 0 #3A3238, 0.75px 0.75px 0 #3A3238;
 }
 
-button:hover {
+.submit:hover,
+.reset:hover,
+.delete-card:hover {
     color: #B6A39E;
     background: #D0D1AC;
 }
 
-button:active {
+.submit:active,
+.reset:active,
+.delete-card:active {
     scale: 0.8;
     transition-duration: 100ms;
 }
@@ -162,8 +166,39 @@ button:active {
 }
 .book-section {
     display: grid;
-    grid-template-rows: repeat(100px);
+    grid-template-rows: 40px;
     grid-auto-rows: 100px;
     gap: 20px;
     padding: 5%;
+}
+
+.book-card,
+.card-headers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    font-size: 1.8em;
+    color: #D0D1AC;
+    text-shadow: -0.75px -0.75px 0 #3A3238, 0.75px -0.75px 0 #3A3238, -0.75px 0.75px 0 #3A3238, 0.75px 0.75px 0 #3A3238;
+}
+
+.book-card {
+    border-bottom: 0.5px solid black;
+}
+
+.card-headers {
+    font-family: 'renaissance';
+    color: #B6A39E;
+}
+
+.delete-card {
+    width: 75%;
+    padding: 10px;
+    font-size: 0.8em;
+    border-radius: 1em;
+    color: #D0D1AC;
+    background: #B6A39E;
+    border: 1px solid #726E75;
+    text-shadow: -0.75px -0.75px 0 #3A3238, 0.75px -0.75px 0 #3A3238, -0.75px 0.75px 0 #3A3238, 0.75px 0.75px 0 #3A3238;
 }
